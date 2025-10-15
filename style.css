@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+  background: #111;
+  color: #eee;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #444;
+  touch-action: none; /* タッチ操作のズームなどを防ぐ */
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
