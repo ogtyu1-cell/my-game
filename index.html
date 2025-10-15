@@ -2,82 +2,19 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Touch Game</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-      touch-action: none;
-      font-family: sans-serif;
-    }
-
-    canvas {
-      background: #111;
-      border: 2px solid #555;
-      border-radius: 8px;
-    }
-
-    #gameOverPopup {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 20px 30px;
-      border-radius: 12px;
-      text-align: center;
-      z-index: 999;
-    }
-
-    #retryBtn {
-      margin-top: 10px;
-      padding: 8px 16px;
-      border: none;
-      background-color: #4CAF50;
-      color: white;
-      font-size: 16px;
-      border-radius: 6px;
-    }
-
-    #retryBtn:active {
-      background-color: #388E3C;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>ブロック崩し（スマホ対応）</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="gameCanvas" width="400" height="600"></canvas>
+  <h1>ブロック崩し</h1>
+  <canvas id="gameCanvas" width="480" height="320"></canvas>
 
   <div id="gameOverPopup">
-    <p>🎮 Game Over!</p>
+    <p>💥 Game Over!</p>
     <button id="retryBtn">もう一度プレイ</button>
   </div>
 
-  <script>
-    const canvas = document.getElementById("gameCanvas");
-    const ctx = canvas.getContext("2d");
-
-    // --- プレイヤー（パドル） ---
-    const paddle = {
-      width: 80,
-      height: 10,
-      x: (canvas.width - 80) / 2,
-      y: canvas.height - 30,
-      speed: 6,
-      moveLeft: false,
-      moveRight: false
-    };
-
-    // --- ボール ---
-    let ball = {
-      x: canvas.width / 2,
-      y: canvas.height - 50,
-      dx: 2,
-      dy: -2,
+  <script src="script.js"></script>
+</body>
+</html>

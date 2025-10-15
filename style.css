@@ -10,12 +10,36 @@ body {
 canvas {
   background: #000;
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   border: 2px solid #444;
-  touch-action: none; /* タッチ操作のズームなどを防ぐ */
+  touch-action: none; /* タッチ操作のズームを防ぐ */
+  border-radius: 6px;
 }
 
-h1 {
-  margin: 10px 0;
-  font-size: 1.5em;
+#gameOverPopup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 999;
+}
+
+#retryBtn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+#retryBtn:active {
+  background-color: #388E3C;
 }
